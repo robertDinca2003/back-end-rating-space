@@ -143,6 +143,12 @@ io.on("connection", (socket) =>{
     })
 
 })
+
+app.get("/",(req,res)=>{
+    res.write(`Connected nigga ${PORT}`)
+    res.end()
+})
+
 const PORT = process.env.PORT || 3001
 server.listen(PORT, () =>{
     console.log("I am running nigga")
